@@ -1,0 +1,16 @@
+version: 1
+formatters:
+  standard:
+    format: "%(asctime)s - %(levelname)s <PID %(process)d:%(processName)s> %(module)s.%(funcName)s(): %(message)s"
+
+2020-02-05T19:01:00.001629019Z 2020-02-05 17:01:00.000  INFO 9 --- [ool-1-thread-10] b.s.o.c.i.service.AtualizacaoService     : Listando nups para atualizacao
+handlers:
+  console:
+    class: logging.StreamHandler
+    level: DEBUG
+    formatter: standard
+    stream: ext://sys.stdout
+
+root:
+  level: DEBUG
+  handlers: [console]

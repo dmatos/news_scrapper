@@ -1,0 +1,8 @@
+setup.py
+news_scrapper.egg-info/PKG-INFO
+news_scrapper.egg-info/SOURCES.txt
+news_scrapper.egg-info/dependency_links.txt
+news_scrapper.egg-info/top_level.txt
+scrapper/__init__.py
+scrapper/util/__init__.py
+scrapper/util/logger.py

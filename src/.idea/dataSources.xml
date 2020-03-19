@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DataSourceManagerImpl" format="xml" multifile-model="true">
+    <data-source source="LOCAL" name="plataforma_coleta@plataforma-coleta-prod.caccybipsr5p.sa-east-1.rds.amazonaws.com" uuid="3d914daa-a6d3-4608-b5a4-a815151655da">
+      <driver-ref>postgresql</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>org.postgresql.Driver</jdbc-driver>
+      <jdbc-url>jdbc:postgresql://plataforma-coleta-prod.caccybipsr5p.sa-east-1.rds.amazonaws.com:4789/plataforma_coleta</jdbc-url>
+    </data-source>
+  </component>
+</project>
