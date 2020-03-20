@@ -9,6 +9,7 @@ import time
 import re
 import os
 import scrapper.util.chrome_driver as chrome
+from scrapper.util.logger import logger
 
 
 class NYTimes:
@@ -19,7 +20,7 @@ class NYTimes:
         self.landing_page = 'https://www.nytimes.com'
 
     def treat_link(self, href):
-        print(href)
+        logger.info(href)
         driver = chrome.inicializar_driver(self.download_dir)
         driver.get(href)
         try:
@@ -27,7 +28,7 @@ class NYTimes:
             time_el = WebDriverWait(driver, 30).until(
                 EC.presence_of_element_located((By.XPATH, time_x_path)))
             timestamp_attr = time_el.get_attribute('datetime')
-            print(timestamp_attr)
+            logger.info(timestamp_attr)
             artigo_x_path = '/html/body/div[1]/div/div/div[2]/main/div/article/section'
             artigo_el = WebDriverWait(driver, 30).until(
                 EC.presence_of_element_located((By.XPATH, artigo_x_path)))

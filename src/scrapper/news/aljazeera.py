@@ -75,6 +75,9 @@ class AlJazeera:
             next_page = True
             page_count = 0
             while next_page:
+
+                driver.switch_to_active_element()
+
                 WebDriverWait(driver, 30).until(
                     EC.presence_of_element_located((By.CLASS_NAME, 'topics-sec-block')))
 

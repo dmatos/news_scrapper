@@ -13,7 +13,7 @@ import time
 import scrapper.util.chrome_driver as chrome
 
 
-class BBC:
+class BBC2019:
 
     def __init__(self, download_dir):
         self.download_dir = download_dir
@@ -80,18 +80,11 @@ class BBC:
 
         logger.info('Iniciando raspagem dos resultados')
 
-        for i in range(2, max_paginas):
-            try:
-                el = driver.find_element(By.CLASS_NAME, 'pagination')
-                el.click()
-                time.sleep(3)
-            except NoSuchElementException as ex:
-                logger.debug(ex)
-                break
-                pass
         try:
-            search_results = WebDriverWait(driver, 30).until(
-                EC.presence_of_element_located((By.CLASS_NAME, 'search-results')))
+            next_page = True
+            while next_page:
+                WebDriverWait(driver, 30).until(
+                    EC.presence_of_element_located((By.CLASS_NAME, 'search-results')))
 
 
             results = driver.find_elements(By.CLASS_NAME, 'search-results')
